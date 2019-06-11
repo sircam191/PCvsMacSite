@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+Author: Cameron Smith
+Date: 6/11/2019
+Class: CIS155 online
+Version: Project V4
+-->
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>	PC vs MAC Desktops </title>
+  <meta name="keywords" content="pc,mac,desktop">
+  <meta name="description" content="Comparing PC and Mac Desktops">
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<header>
+<h1> <strong> PC vs MAC Desktops </strong> </h1>
+ <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="table.html">Comparison</a></li>
+    <li><a href="form.html">Form</a></li>
+    <li><a href="https://www.amazon.com/Desktops-Computers-Add-Ons/b?ie=UTF8&node=565098">Shop For a New PC</a></li>
+  </ul>
+
+ </nav>
+ </header>
+ <section>
+    <h1>What Do You Think Are The Average Specs For a PC?</h1>
+    <form action="#" method="get">
+      <LABEL for="title">OS: </LABEL>
+<!-- M7LO8 Demonstrate the use of a selection list in a form -->
+            <INPUT type="text" id="titlebox" list="osList"><BR>
+
+      <LABEL for="name">Name </LABEL>
+<!-- M7LO5 Demonstrate the use of a text box in a form -->
+            <INPUT type="text" id="nameBox" required><BR>
+
+      <LABEL for="processor">Processor: </LABEL>
+<!-- M7LO6 Demonstrate the use of check boxes in a form -->
+            <INPUT type="checkbox" name="intel" value="Intel"> INTEL<br>
+            <INPUT type="checkbox" name="amd" value="AMD"> AMD<br>
+
+      <LABEL for="dedicatedGPU">Dedicated GPU: </LABEL>
+<!-- M7LO7 Demonstrate the use of radio buttons in a form -->
+      <INPUT type="radio" name="gpu" value="yes">Yes<br>
+      <INPUT type="radio" name="gpu" value="no"> No
+        <br>
+      <LABEL for="ram">RAM: </LABEL>
+<!-- M7LO9 Demonstrate the use of a text area in a form -->
+      <textarea rows="4" cols="50" name="comment"">
+Enter GB or RAM...</textarea>
+
+
+              <datalist id="osList">
+                <option value="Windows">
+                <option value="MAC OS">
+                <option value="Linux">
+                <option value="Other">
+              </datalist>
+
+
+
+              <datalist id="registerType">
+                <option value="ACGIP Member ($695)">
+                <option value="Non-Member ($795)">
+                <option value="Student ($310)">
+                <option value="Poster ($95)">
+                <option value="Guest ($35)">
+              </datalist>
+
+  <p>
+<!-- M7LO10 Demonstrate the use of a submit button in a form -->
+      <input type="submit" value="Submit!">
+  </p>
+    </form>
+
+ </section>
+
+</html>

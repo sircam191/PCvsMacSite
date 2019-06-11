@@ -1,9 +1,9 @@
 @charset "utf-8";
 /*
 Author: Cameron Smith
-Date: 5/7/2019
+Date: 6/11/2019
 Class: CIS155 online
-Version: Project V3
+Version: Project V4
 */
 /* Structural Styles */
 
@@ -203,6 +203,7 @@ table {
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,64,64,1) 50%);
   border: 2px solid black;
+
 }
 
 th, td > table {
@@ -243,4 +244,47 @@ table > thead > th:first-of-type {
 thead > tr > th:not(first-of-type) {
   background-color: transparent;
   color: black;
+}
+
+/* From Styles */
+/* M7LO11 Demonstrate how to format a form with CSS */
+/* Adds space from the foms boxs and the labels, adds color and resizing to the subit button. */
+label {
+   display: block;
+   float: left;
+   clear: left;
+   margin: 15px;
+   width: 100px;
+}
+
+input[type='submit'] {
+   background-color: rgb(66, 185, 244);
+   color: rgb(244, 71, 65);
+   border-radius: 30px;
+   font-size: 2em;
+   height: 40px;
+   width: 150px;
+}
+
+/* Media Styles */
+/* M8LO12 Demonstrate how to format media with CSS */
+/* Resizes video player */
+video {
+  display: block;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation-name: movement;
+  animation-duration: 5s;
+
+}
+
+/* Animation Stlye */
+/* M8LO10 Demonstrate a CSS animation or transition */
+/* Video player flashes colors for 5 seconds */
+@keyframes movement {
+  0%   {background-color: red;}
+  25%  {background-color: blue;}
+  50%  {background-color: red;}
+  100% {background-color: green;}
 }
