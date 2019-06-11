@@ -1,0 +1,114 @@
+<!doctype html>
+<!--
+Author: Cameron Smith
+Date: 5/7/2019
+Class: CIS155 online
+Version: Project V3
+-->
+
+
+<html lang="en">
+<!-- M1LO6 Demonstrate the use of basic HTML tags to create a simple Web page -->
+<head>
+  <meta charset="utf-8" />
+  <title>	PC vs MAC Desktops </title>
+  <meta name="keywords" content="pc,mac,desktop">
+  <meta name="description" content="Comparing PC and Mac Desktops">
+<!-- M1LO8 Demonstrate the use of external style sheets (HTML, note the external style sheet must exist and contain CSS) -->
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<header>
+<h1> <strong> PC vs MAC Desktops </strong> </h1>
+ <nav>
+<!-- M1LO12 Create navigation using unordered lists -->
+  <ul>
+<!-- M1LO13A Demonstrate a hyperlink to another page on your site (site navigation) -->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="table.html">Comparison</a></li>
+<!-- M1LO13C Demonstrate a hyperlink to an external page -->
+    <li><a href="https://www.amazon.com/Desktops-Computers-Add-Ons/b?ie=UTF8&node=565098">Shop For a New PC</a></li>
+  </ul>
+
+ </nav>
+ </header>
+
+<!-- M6LO3 Demonstrate how to create a table (Comparison computer specs and price.) -->
+ <table id="comp">
+   <colgroup>
+     <col id="column1">
+   </colgroup>
+   <thead>
+ <tr>
+<!-- M6LO4 Demonstrate how to span multiple rows or multiple columns in a table (Spans 2 rows and 2 columns) -->
+   <th rowspan="2" colspan="2">Computer: </th>
+   <th>Mac Mini</th>
+   <th>Mac Pro</th>
+   <th>HP Omen</th>
+   <th>CyberPowerPC</th>
+ </tr>
+ <tr>
+   <td>$799</td>
+   <td>$2,999</td>
+   <td>$749</td>
+   <td>$2099</td>
+ </tr>
+   </thead>
+<tbody>
+
+     <tr>
+       <th colspan="2">Processor:</th>
+       <td>3.6GHz quad-core Intel Core i3</td>
+       <td>3.6GHz 6-core Intel Xeon E5</td>
+       <td>8th Generation Intel® Core™ i5-8400</td>
+       <td>ntel® Core™ Processor i9-9900K 3.60GHZ</td>
+     </tr>
+
+     <tr>
+       <th colspan="2">Ram:</th>
+       <td>8GB</td>
+       <td>16GB</td>
+       <td>8GB</td>
+       <td>16GB</td>
+     </tr>
+
+     <tr>
+       <th colspan="2">Storage:</th>
+       <td>128GB</td>
+       <td>256GB</td>
+       <td>1TB</td>
+       <td>1TB</td>
+     </tr>
+
+     <tr>
+       <th colspan="2">GPU:</th>
+       <td>NA</td>
+       <td>Dual AMD FirePro D500</td>
+       <td>GTX 1050TI</td>
+       <td>RTX 2080</td>
+     </tr>
+
+     <tr>
+       <th colspan="2">Form Factor</th>
+       <td>Very Small</td>
+       <td>Small</td>
+       <td>Large</td>
+       <td>Very Large</td>
+     </tr>
+
+   </tbody>
+   <tfoot>
+     <tr>
+       <th colspan="2"> Worth It? </th>
+       <td>No</td>
+       <td>No</td>
+       <td>Yes</td>
+       <td>Yes</td>
+     </tr>
+
+   </tfoot>
+ </table>
+
+</body>

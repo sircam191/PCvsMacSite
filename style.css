@@ -1,0 +1,246 @@
+@charset "utf-8";
+/*
+Author: Cameron Smith
+Date: 5/7/2019
+Class: CIS155 online
+Version: Project V3
+*/
+/* Structural Styles */
+
+/* M2LO12 Demonstrate how CSS can change presentation of page elements */
+html{
+/* M4LO2 Demonstrate the use of background images (CSS) */
+  background-image: url("background1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* M4LO4 Demonstrate the use of gradients (CSS) */
+header {
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*gradient source: https://uigradients.com/ */
+}
+
+body {
+  font-family: verdana;
+}
+/* M2LO3A Demonstrate style precedence in CSS*/
+h1 {
+  font-size: 50px;
+/* M4LO5 Demonstrate the use of text or box shadowing (Adds white shadow with blur to website header) */
+  text-shadow: 5px 5px 15px white;
+  font-family: monospace;
+}
+/* Navigation Styles */
+nav {
+/* M3LO3 Demonstrate a clearing float */
+  clear: both;
+  padding-top: 8px;
+  padding-bottom: 8px;
+	display: table;
+	width: 100%;
+}
+/* M2LO5 Demonstrate contextual selectors */
+nav > ul {
+	display: table-row;
+}
+/* M2LO3B Demonstrate style inheritance in CSS*/
+nav > ul > li {
+	text-align: center;
+}
+/* M2LO11A Demonstrate a pseudo-class selector */
+a:link {
+/* M2LO14 Demonstrate and explain the use of progressive enhancement in CSS */
+color: black;
+color: hsla(247, 80%, 0%, 0.64);
+text-decoration: none;
+}
+a:active {
+  color: hsla(247, 80%, 0%, 0.64);
+  text-decoration: none;
+}
+a:visited {
+  color: hsla(247, 80%, 0%, 0.64);
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+
+/* Section Styles */
+header > h1 {
+text-align: center;
+/* M2LO13 Demonstrate how CSS can change presentation of textual elements */
+color: hsla(247, 80%, 0%, 0.48);
+}
+/* M2LO6B  Demonstrate a CSS class selector */
+section.use {
+  font-size: 0.7em;
+    font-weight: normal;
+    margin: 0px;
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+footer {
+color: white;
+padding-top: 150px;
+text-align: center;
+}
+/* M2LO5 Demonstrate contextual selectors */
+body > h4 {
+  text-align: center;
+}
+/* M2LO7 Demonstrate a CSS attribute selector other than class or id */
+[title~="About"] {
+  border: 5px;
+  color: yellow;
+}
+/* M2LO11B Demonstrate a pseudo-element selector */
+h4 > p::first-line {
+  color: yellow;
+}
+/*color picker source: http://hslpicker.com/ */
+ul {
+  display:inline-block;
+  border:1px solid #000;
+/* M4LO3 Demonstrate the use of rounded corners for borders (CSS) */
+  border-radius: 5px;
+  padding:20px;
+}
+
+
+#img1 {
+  margin: auto 50px;
+/* M3LO2 Demonstrate floating elements (puts image to the left) */
+  float: left;
+  width: 150px;
+  height: 38px;
+  filter: drop-shadow(0px 15px 10px rgba(50, 50, 50, 0.5));
+  width: 30%;
+  height: auto;
+/* M4LO6 Demonstrate the use of opacity/transparency for images */
+  filter: opacity(0.9);
+/* M3LO4 Demonstrate removing container collapse by having a container element with a style rule that expands it around its floated content */
+  clear: both;
+/* M4LO8 Demonstrate the use of transformations for 2D or 3D images (Flips the image of the mac)  */
+  transform: rotateY(180deg)
+}
+#img2 {
+  margin: auto 50px;
+  float: right;
+  filter: drop-shadow(0px 15px 10px rgba(50, 50, 50, 0.5));
+  width: 30%;
+  height: auto;
+
+/* M3LO9 Demonstrate fixed, static, or inherited positioning */
+  position: static;
+}
+#spec1 {
+/* M3LO8 Demonstrate absolute or relative positioning */
+  position: relative;
+  color: hsla(247, 80%, 56%, 0.66);
+  text-align: center;
+/* M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is) */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+/* M5LO5 Demonstrate the use of flexboxes on a web page */
+/*M5LO7 Demonstrate use of properties of flexbox containers */
+.flexbox {
+  display: flex;
+/* M5LO7 Demonstrate use of properties of flexbox containers */
+  flex-direction: row;
+  padding: 15px;
+  align-content: flex-start;
+  height: 300px;
+}
+/* M5LO6 Demonstrate use of properties of flexbox items */
+.flexbox > div {
+  color: white;
+}
+
+
+/*For Mobile Devices: */
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs. (Makes the images and header smaller on mobile devices)*/
+@media screen and (max-width: 480px) {
+  #img1, #img2 {
+    width: 75px;
+    height: 19px;
+  }
+  header {
+    font-size: 50%;
+  }
+}
+
+/* DropDowns */
+/*M5LO4 Use CSS for pull-down menus (Menu is in the top right and when moused over drops down 3 links. ) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  }
+
+.dropdown-info {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 50px;
+  box-shadow: 0px 10px 25px 3px rgba(0,0,0,0.5);
+  z-index: 1;
+  }
+
+.dropdown:hover .dropdown-info {
+  display: block;
+  }
+
+/* TABLE */
+table {
+
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,64,64,1) 50%);
+  border: 2px solid black;
+}
+
+th, td > table {
+  border: 2px solid black;
+  line-height: 1.4em;
+  padding: 8px;
+}
+th {
+
+  background-color: hsla(264, 57%, 63%, 0.55);
+  color: rgb(130,210,255);
+  font-weight: normal;
+}
+td {
+border: 0.5px solid white;
+  color: white;
+  font-size: 0.9em;
+  vertical-align: center;
+}
+
+/* Column Styles */
+/* M6LO7 Demonstrate how to format a table with CSS (Adds background radiant, borders, and text markups.) */
+#column1 col {
+  column-gap: 5px
+}
+.dataCol col {
+  column-gap: 5px
+}
+
+/* Table Header Styles */
+tr > th {
+  height: 60px;
+}
+table > thead > th:first-of-type {
+  font-size: 2em;
+}
+
+thead > tr > th:not(first-of-type) {
+  background-color: transparent;
+  color: black;
+}
